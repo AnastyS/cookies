@@ -1,0 +1,38 @@
+/* static/css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.btn-outline-success, .btn-primary {
+    background-color: #6a0d83 !important; 
+    border-color: #6a0d83 !important;
+    color: white; 
+}
+.btn-outline-success:hover, .btn-primary:hover {
+    background-color: #800080 !important; 
+    border-color: #800080 !important; 
+}
+
+footer {
+    background-color: rgb(192, 167, 246);
+    border-top: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    position:fixed;
+    bottom:0px;
+    height:70px;
+    
+}
