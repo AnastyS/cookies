@@ -11,10 +11,12 @@ function setTheme(theme) {
     }
 }
 
+
 // Функция для сохранения темы в cookies
 function saveTheme(theme) {
     document.cookie = "theme=" + theme + "; path=/; max-age=" + (60 * 60 * 24 * 365); // Кука на 1 год
 }
+
 
 // Получение сохраненной темы из cookies
 function getSavedTheme() {
@@ -28,6 +30,7 @@ function getSavedTheme() {
     console.warn("темы нет");
     return null;
 }
+
 
 // Инициализация темы при загрузке страницы
 window.onload = function() {
@@ -55,6 +58,7 @@ function saveSearch() {
     document.cookie = "search=" + searchInput + "; path=/; max-age=" + (60 * 60 * 24 * 365); // Кука на 1 год
     document.getElementById('search-form').submit(); // Отправляем форму
 }
+
 
 // Функция для получения сохраненных данных поиска из куки
 function getSavedSearch() {
