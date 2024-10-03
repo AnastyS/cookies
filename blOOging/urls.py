@@ -15,12 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from app import views
+from django.urls import path #Импортирует функцию path из модуля django.urls, которая используется для определения маршрутов.
+from app import views #Импортирует модуль views из приложения app, в котором определены представления, которые будут обрабатывать запросы.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index_page, name='index'),
-    path('', views.save_settings, name='save_settings' ),
-    path('save_theme/', views.save_theme, name='save_theme')
+    path('', views.index_page, name='index'), #Определяет маршрут для главной страницы.
+    path('', views.save_settings, name='save_settings' ), #Определяет маршрут для сохранения настроек.
+    path('save_theme/', views.save_theme, name='save_theme') #Определяет маршрут для сохранения темы.
 ]

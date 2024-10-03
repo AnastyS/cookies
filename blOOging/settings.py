@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app', # Добавляем наше приложение из "Шаг 5"
+    'app', # Добавляем наше приложение 
     'django.contrib.postgres', #это модуль Django, который предоставляет интеграцию с базой данных PostgreSQL 
 ]
 
