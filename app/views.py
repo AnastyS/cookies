@@ -1,19 +1,17 @@
-from django.shortcuts import render, redirect
-from urllib.parse import quote, unquote
-from django.http import HttpResponse
+from django.shortcuts import render, redirect #используется для рендеринга шаблонов.
+from urllib.parse import quote, unquote #используется для декодирования URL-кодированных строк.
+from django.http import HttpResponse #используется для создания HTTP-ответов.
 
 #получение данных из кукис
 #request = запрос
 def index_page(request):
     team = request.COOKIES.get('team', unquote('Не выбрано', encoding='utf-8')) #Получает значение куки team. Если куки нет, используется значение по умолчанию 'Не выбрано', декодированное из URL-кодированного формата.
     theme = request.COOKIES.get('theme', 'light')#Получает значение куки theme. Если куки нет, используется значение по умолчанию 'light'.
-    language = request.COOKIES.get('language', 'ru')
 
 #get - метод получения запроса с сервера
 #рендеринг шаблона
     return render(request, 'index.html', {
         'theme': theme,
-        'language': language,
         'team': team
     })
 
